@@ -1,158 +1,89 @@
-/* styles.css */
-
-/* Global Styles */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* css/styles.css */
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* Light Gray Background */
 }
-
-/* Header Styles */
 
 header {
-  background-color: #007bff;
-  color: #fff;
-  padding: 1em;
-  text-align: center;
+    background-color: #333; /* Dark Gray Background */
+    color: #fff; /* White Text */
+    padding: 1em;
+    text-align: center;
 }
 
-header h1 {
-  margin: 0;
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
-/* Navigation Styles */
-
-nav {
-  background-color: #333;
-  color: #fff;
-  padding: 0.5em;
-  text-align: center;
+header nav ul li {
+    margin-right: 20px;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+header nav a {
+    color: #fff; /* White Text */
+    text-decoration: none;
 }
 
-nav li {
-  display: inline-block;
-  margin-right: 20px;
+#hero {
+    background-color: #008ebc; /* FLAG Blue Background */
+    color: #fff; /* White Text */
+    padding: 2em;
+    text-align: center;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
+#hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
-/* Main Content Styles */
-
-main {
-  display: block;
-  padding: 1em;
+#hero h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-section {
-  background-color: #fff;
-  padding: 1em;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+#hero button {
+    background-color: #333; /* Dark Gray Background */
+    color: #fff; /* White Text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-h2 {
-  margin-top: 0;
+#portfolio, #services, #about, #contact {
+    padding: 2em;
 }
 
-/* Footer Styles */
+#portfolio h2, #services h2, #about h2, #contact h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.portfolio-grid,.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.portfolio-item,.service-item {
+    background-color: #fff; /* White Background */
+    padding: 1em;
+    border: 1px solid #ddd; /* Light Gray Border */
+    border-radius: 10px; /* Slightly Rounded Corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+}
 
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 0.5em;
-  text-align: center;
-  clear: both;
-}
-
-/* Responsive Design */
-
-@media (max-width: 768px) {
- .showcase-container {
-    flex-direction: column; /* Stack product cards vertically on smaller screens */
-    padding: 20px; /* Reduce padding for smaller screens */
-  }
- .product-card {
-    width: 100%; /* Make product cards full-width on smaller screens */
-    margin-bottom: 20px; /* Add margin between product cards on smaller screens */
-  }
-}
-/* Optional: Adjust layout for very small screens (max-width: 480px) */
-@media (max-width: 480px) {
-.showcase-container {
-    padding: 10px; /* Further reduce padding for very small screens */
-  }
-.product-card {
-    margin-bottom: 10px; /* Reduce margin between product cards on very small screens */
-  }
-}
-
-/* Showcase Container */
-.showcase-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 40px;
-  background-color: #f7f7f7; /* Light Gray Background */
-}
-
-/* Product Card */
-.product-card {
-  width: 300px; /* Adjust the width as needed */
-  background-color: #ffffff; /* White Background */
-  border: 1px solid #dddddd; /* Light Gray Border */
-  border-radius: 10px; /* Slightly Rounded Corners */
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
-}
-
-/* Product Image */
-.product-card img {
-  width: 100%;
-  height: 150px; /* Adjust the height as needed */
-  object-fit: cover;
-  border-radius: 10px 10px 0 0; /* Rounded Corners for the Top */
-}
-
-/* Product Title and Description */
-.product-card h3 {
-  font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.product-card p {
-  font-size: 14px;
-  color: #666666; /* Dark Gray Text */
-  margin-bottom: 20px;
-}
-
-/* Learn More Button */
-.product-card button {
-  background-color: #007bff; /* Blue Background */
-  color: #ffffff; /* White Text */
-  border: none;
-  padding: 10px 20px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.product-card button:hover {
-  background-color: #0056b3; /* Darker Blue on Hover */
+    background-color: #333; /* Dark Gray Background */
+    color: #fff; /* White Text */
+    padding: 1em;
+    text-align: center;
+    clear: both;
 }
