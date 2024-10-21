@@ -1,14 +1,27 @@
-/* css/styles.css */
+/* Global Styles */
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Montserrat, sans-serif; /* Update font family */
+  font-size: 16px; /* Optional: Update base font size */
   margin: 0;
   padding: 0;
-  background-color: #f7f7f7; /* Light Gray Background */
+  background-color: var(--alabaster); /* Light Background Color */
 }
 
+:root {
+  --primary-blue: #008EBC;
+  --picton-blue: #00A3D6;
+  --bice-blue: #006B9F;
+  --alabaster: #E6EBE0;
+  --verdigris: #5CA4A9;
+  --ash-grey: #9BC1BC;
+  --lemon-chiffon: #F4F1BB;
+}
+
+/* Header Section */
+
 header {
-  background-color: #333; /* Dark Gray Background */
+  background-color: var(--bice-blue); /* Dark Blue Background */
   color: #fff; /* White Text */
   padding: 1em;
   text-align: center;
@@ -31,8 +44,16 @@ header nav a {
   text-decoration: none;
 }
 
+header img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Hero Section */
+
 #hero {
-  background-color: #008ebc; /* FLAG Blue Background */
+  background-color: var(--primary-blue); /* FLAG Blue Background */
   color: #fff; /* White Text */
   padding: 2em;
   text-align: center;
@@ -47,21 +68,25 @@ header nav a {
   font-size: 24px;
   margin-bottom: 20px;
 }
+
 #hero p {
-  font-size: 12px; 
+  font-size: 18px; /* Updated font size */
   margin-bottom: 30px;
 }
+
 #hero button {
-  background-color: #333; /* Dark Gray Background */
+  background-color: var(--bice-blue); /* Dark Blue Background */
   color: #fff; /* White Text */
   border: none;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
 }
+
+/* Welcome Section */
+
 #Welcome {
-  
-  background-color: #ff0000; /* 911 Red */
+  background-color: var(--verdigris); /* Soft Greenish Background */
   color: #fff; /* White Text */
   padding: 2em;
   text-align: center;
@@ -71,11 +96,14 @@ header nav a {
   font-size: 36px;
   margin-bottom: 10px;
 }
+
 #Welcome p {
   font-size: 24px;
   margin-bottom: 10px;
 }
-/* New Animation CSS: Fade-In + Scale-Up */
+
+/* Animation for Welcome Section */
+
 #Welcome {
   opacity: 0;
   transform: scale(0.5);
@@ -86,14 +114,20 @@ header nav a {
   opacity: 1;
   transform: scale(1);
 }
+
+/* Portfolio Section */
+
 #portfolio h2, #services h2, #about h2, #contact h2 {
   font-size: 24px;
   margin-bottom: 10px;
+  color: var(--picton-blue); /* Picton Blue for headings */
 }
+
 #portfolio p, #services p, #about p, #contact p {
-  font-size: 12px;
+  font-size: 18px; /* Updated font size */
   margin-bottom: 10px;
 }
+
 .portfolio-grid,.services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -103,13 +137,38 @@ header nav a {
 .portfolio-item,.service-item {
   background-color: #fff; /* White Background */
   padding: 1em;
-  border: 1px solid #ddd; /* Light Gray Border */
+  border: 1px solid var(--ash-grey); /* Light Grey Border */
   border-radius: 10px; /* Slightly Rounded Corners */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
 }
+.portfolio-item, .service-item {
+  display: grid; /* Enable grid layout */
+  place-items: center; /* Both horizontal and vertical centering */
+  padding: 20px; /* Optional: Add some padding for breathing room */
+}
+.portfolio-item img {
+  max-width: 100%; /* Ensure image doesn't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px;
+}
+
+/* Services Section */
+
+#services {
+  background-color: var(--alabaster); /* Light Background Color */
+  padding: 2em;
+}
+
+/* About & Contact Sections */
+
+#about, #contact {
+  padding: 2em;
+}
+
+/* Footer Section */
 
 footer {
-  background-color: #333; /* Dark Gray Background */
+  background-color: var(--bice-blue); /* Dark Blue Background */
   color: #fff; /* White Text */
   padding: 1em;
   text-align: center;
