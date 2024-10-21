@@ -1,89 +1,117 @@
 /* css/styles.css */
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7; /* Light Gray Background */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7; /* Light Gray Background */
 }
 
 header {
-    background-color: #333; /* Dark Gray Background */
-    color: #fff; /* White Text */
-    padding: 1em;
-    text-align: center;
+  background-color: #333; /* Dark Gray Background */
+  color: #fff; /* White Text */
+  padding: 1em;
+  text-align: center;
 }
 
 header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 header nav ul li {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 header nav a {
-    color: #fff; /* White Text */
-    text-decoration: none;
+  color: #fff; /* White Text */
+  text-decoration: none;
 }
 
 #hero {
-    background-color: #008ebc; /* FLAG Blue Background */
-    color: #fff; /* White Text */
-    padding: 2em;
-    text-align: center;
+  background-color: #008ebc; /* FLAG Blue Background */
+  color: #fff; /* White Text */
+  padding: 2em;
+  text-align: center;
 }
 
 #hero h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
 #hero h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
-
+#hero p {
+  font-size: 12px; 
+  margin-bottom: 30px;
+}
 #hero button {
-    background-color: #333; /* Dark Gray Background */
-    color: #fff; /* White Text */
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+  background-color: #333; /* Dark Gray Background */
+  color: #fff; /* White Text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#Welcome {
+  
+  background-color: #ff0000; /* 911 Red */
+  color: #fff; /* White Text */
+  padding: 2em;
+  text-align: center;
 }
 
-#portfolio, #services, #about, #contact {
-    padding: 2em;
+#Welcome h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+#Welcome p {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+/* New Animation CSS: Fade-In + Scale-Up */
+#Welcome {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 1.5s, transform 1.5s;
 }
 
+#Welcome.fade-in-scale-up {
+  opacity: 1;
+  transform: scale(1);
+}
 #portfolio h2, #services h2, #about h2, #contact h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
-
+#portfolio p, #services p, #about p, #contact p {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
 .portfolio-grid,.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 }
 
 .portfolio-item,.service-item {
-    background-color: #fff; /* White Background */
-    padding: 1em;
-    border: 1px solid #ddd; /* Light Gray Border */
-    border-radius: 10px; /* Slightly Rounded Corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+  background-color: #fff; /* White Background */
+  padding: 1em;
+  border: 1px solid #ddd; /* Light Gray Border */
+  border-radius: 10px; /* Slightly Rounded Corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
 }
 
 footer {
-    background-color: #333; /* Dark Gray Background */
-    color: #fff; /* White Text */
-    padding: 1em;
-    text-align: center;
-    clear: both;
+  background-color: #333; /* Dark Gray Background */
+  color: #fff; /* White Text */
+  padding: 1em;
+  text-align: center;
+  clear: both;
 }
